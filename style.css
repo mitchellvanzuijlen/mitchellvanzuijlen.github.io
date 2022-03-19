@@ -1,0 +1,264 @@
+@keyframes highlight_animation {
+    0% {
+        background-color: initial;
+    }
+    50% {
+        background-color: rgba(255, 0, 0, .2);
+    }
+    100% {
+        background-color: initial;
+    }
+}
+
+.short_highlight {
+    animation: highlight_animation 2s
+}
+
+.main_section {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.container {
+    overflow: hidden;
+    display: grid;
+}
+
+.scrolling_element {
+    flex: 1;
+    opacity: 0;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: -1;
+}
+
+.scroll_visible {
+    opacity: 1;
+    z-index: 1;
+}
+
+.scroll_left_in {
+    animation: scroll_left 0.7s linear 1 forwards;
+}
+
+.scroll_left_out {
+    animation: scroll_left 0.7s linear 1 forwards reverse;
+}
+
+.scroll_right_in {
+    animation: scroll_right 0.7s linear 1 forwards;
+}
+
+.scroll_right_out {
+    animation: scroll_right 0.7s linear 1 forwards reverse;
+}
+
+@keyframes scroll_left {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    /* 50%{opacity: 1;} */
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll_right {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    /* 50%{opacity: 1;} */
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.black {
+    color: black
+}
+
+.hidden_tabs {
+    display: none;
+}
+
+.tab.selected_button {
+    border-color: #a00;
+    animation: bottom_bar_in 0.7s ease-in-out 1 forwards;
+}
+
+@keyframes bottom_bar_in {
+    0% {
+        border-color: #ccc;
+    }
+    100% {
+        border-color: #a00;
+    }
+}
+
+@keyframes bottom_bar_out {
+    0% {
+        border-color: #a00;
+    }
+    100% {
+        border-color: #ccc;
+    }
+}
+
+.tab {
+    border-bottom: 6px solid #ccc;
+    text-align: center;
+    width: 33%;
+    float: left;
+    animation: bottom_bar_out 0.7s ease-in-out 1 forwards;
+}
+
+.tab:hover {
+    background-color: lightgrey;
+}
+
+.row-tabs {
+    box-sizing: inherit;
+}
+
+.title {
+    font-size: 1.5em;
+}
+
+.title-smaller {
+    font-size: 1.2em;
+}
+
+.spacing {
+    margin: 0.5em;
+}
+
+.top-animation {
+    position: relative;
+    animation: animatetop 0.4s
+}
+
+.top {
+    /* width: 750px; */
+    /* Width is set relativly to the rest due to position fixed on load. Set this, so it doesn't jump aroud during loading*/
+    position: fixed;
+    z-index: 5;
+    background-color: white;
+    border-bottom: 2px solid grey;
+    padding-bottom: 0.5em;
+}
+
+.top-margin {
+    margin-top: -.5em
+}
+
+@media (max-width: 54em) {
+    .title {
+        font-size: 1.2em
+    }
+    .title-smaller {
+        font-size: 1em;
+    }
+    .spacing {
+        margin: 0.4em;
+    }
+}
+
+@media (max-width: 48em) {
+    .title {
+        font-size: 1em
+    }
+    .title-smaller {
+        font-size: 0.8em;
+    }
+    .spacing {
+        margin: 0.2em;
+    }
+    .small {
+        display: none
+    }
+}
+
+.menu-links {
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+    color: #313131;
+    letter-spacing: -.025rem;
+    margin-top: 0.5em;
+}
+
+a {
+    cursor: pointer;
+}
+
+a, b, h5, .red {
+    color: #a00;
+    text-decoration: none;
+}
+
+s2 {
+    color: lightslategray;
+    margin-left: 2em;
+}
+
+s1 {
+    color: lightslategray
+}
+
+.image {
+    max-height: 350px;
+    margin: 20px;
+    border-radius: 5%;
+}
+
+.logo {
+    max-height: 55px;
+    max-width: 55px;
+    /* opacity:0.5; */
+}
+
+.logo_holder {
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.text_next_to_image {
+    display: flex;
+    margin-block-end: 1em;
+}
+
+.left_border {
+    border-left: solid 2px #a00;
+    /* border-top-left-radius: 15px;
+    border-bottom-left-radius:15px; */
+}
+
+.small_indend {
+    padding-left: 1.5em;
+}
+
+.text_with_image {
+    overflow: auto;
+    margin-top: 6em;
+}
+
+.right {
+    float: right;
+}
+
+h2 {
+    position: relative
+}
+
+h2 span {
+    position: absolute;
+    top: -150px;
+}
