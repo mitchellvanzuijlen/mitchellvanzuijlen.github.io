@@ -27,19 +27,21 @@
     overflow: hidden;
     display: grid;
 }
-
+.scroll_visible {
+    opacity: 1;
+    z-index: 1;
+    height:fit-content;
+}
 .scrolling_element {
     flex: 1;
     opacity: 0;
     grid-row: 1;
     grid-column: 1;
     z-index: -1;
+    height:0;
 }
 
-.scroll_visible {
-    opacity: 1;
-    z-index: 1;
-}
+
 
 .scroll_left_in {
     animation: scroll_left 0.7s linear 1 forwards;
